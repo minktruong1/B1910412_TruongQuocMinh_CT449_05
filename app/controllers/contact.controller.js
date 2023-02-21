@@ -90,24 +90,19 @@ exports.findAllFavorite = async (_req, res, next) => {
     );
   }
 };
-// Start develop part
 exports.addFavorite = (req, res) => {
   const contactId = req.params.id;
-  // Add the specified contact to the user's favorites list
   res.send({ message: `Added contact ${contactId} to favorites list` });
 };
 
 exports.removeFavorite = (req, res) => {
   const contactId = req.params.id;
-  // Remove the specified contact from the user's favorites list
   res.send({ message: `Removed contact ${contactId} from favorites list` });
 };
 
 exports.listFavorites = (req, res) => {
-  // Return a list of all contacts in the user's favorites list
   res.send({ message: "Listing user's favorite contacts" });
 };
-// End develop part
 
 // Create and Save a new Contact
 exports.create = async (req, res, next) => {
